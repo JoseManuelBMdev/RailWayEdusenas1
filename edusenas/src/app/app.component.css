@@ -1,0 +1,14 @@
+.invalid-input {
+    border: 2px solid red;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+.container{
+  width: 100%;
+  max-width:none;
+}

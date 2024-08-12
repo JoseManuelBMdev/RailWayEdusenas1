@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 150%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 80px;
+  margin-left: -15px;
+  
+}
+.logo{
+  
+}
+
+.accordion-item {
+  background-color: transparent; /* Sin fondo para el acordeón dentro de la tarjeta */
+  border: none; /* Sin borde para el acordeón */
+}
+.accordion-button {
+  background-color: transparent; /* Sin fondo para el botón */
+  border: none; /* Sin borde para el botón */
+  padding: 0; /* Sin relleno para el botón */
+  /* visibility: hidden; */
+
+}
+.accordion-button::after {
+  content: ''; /* O el contenido actual del ícono */
+  display: none; /* Oculta el pseudo-elemento del ícono */
+}
+.accordion-button img {
+  width: 100%; /* Ajusta el tamaño de la imagen para que ocupe el ancho completo */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+.accordion-header {
+  text-align: center; /* Centra el texto debajo de la imagen */
+}
+.accordion-body {
+  background-color: #027ea1; /* Fondo azul para el cuerpo del acordeón */
+  color: white; /* Texto blanco */
+  
+}
+.accordion-body a {
+  text-decoration: none; /* Sin subrayado para los enlaces */
+}
+.card {
+  border: 1px solid #ddd; /* Borde para la tarjeta */
+  border-radius: 0.25rem; /* Bordes redondeados para la tarjeta */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra para la tarjeta */
+  margin-bottom: 15px; /* Espacio entre las tarjetas */
+}
+.card-header {
+  background-color: transparent; /* Fondo transparente para el encabezado de la tarjeta */
+  border-bottom: none; /* Sin borde inferior para el encabezado de la tarjeta */
+}
+.card-title {
+  margin-top: 10px; /* Espacio entre la imagen y el texto */
+  color: #027ea1; /* Texto blanco para el título */
+  font-family: League Spartan;
+
+}
+
+/*Estilos para el LOGO*/
+
+.logo{
+  margin-top: -40px;
+  margin-left: 5px;
+}
+
+.container {
+  
+  padding-top: 100px; /* Para ajustar el contenido debajo del header */
+  margin-top: -90px;
+
+}
+.titulo-lecciones{
+  text-align: center;
+  margin-top: 80px;
+  
+}
+h1{
+  font-family: League Spartan;
+  font-size: 40px;
+  color: #027ea1;
+  font-weight: bold;
+}
+

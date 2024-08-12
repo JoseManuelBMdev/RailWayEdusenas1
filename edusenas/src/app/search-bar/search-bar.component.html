@@ -1,0 +1,14 @@
+<div class="search-container">
+    <form (ngSubmit)="onSearch()">
+        <div class="row">
+            <div class="input-field col-11">
+                <input id="search" type="text" [(ngModel)]="query" name="query" class="validate">
+                <label for="search"></label>
+            </div>
+            <div class="input-field col-1">
+                <button type="submit" class="btn waves-effect waves-light"><i class="material-icons">search</i></button>
+            </div>
+        </div>
+    </form>
+</div>
+

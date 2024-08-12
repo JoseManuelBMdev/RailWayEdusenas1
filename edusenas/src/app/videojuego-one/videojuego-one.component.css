@@ -1,0 +1,39 @@
+/* body{
+    background-color: white;
+} */
+
+/* Estilo para que el iframe ocupe toda la pantalla */
+.container {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; 100% de la altura de la ventana */
+  }
+  
+  iframe {
+    width: 1800px; 
+    height: 800px;
+  }
+/*   
+  .fondo{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+  } */
+  .boton {
+    position: absolute;
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde el lado derecho */
+  }
+  
+  .boton img {
+    width: 80px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantén la proporción de la imagen */
+    border-radius: 5px; /* Agrega bordes redondeados si deseas */
+    transition: transform 0.3s; /* Agrega una transición suave */
+  }
+  
+  .boton:hover img {
+    transform: scale(1.1); /* Hace que la imagen se agrande ligeramente al pasar el cursor sobre ella */
+  }

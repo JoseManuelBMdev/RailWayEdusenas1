@@ -1,0 +1,209 @@
+
+.container{
+   width: 100%;
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+.col {
+    flex: initial !important;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.contendo1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+}
+.logo-1{
+    width: 200px;
+    height: 100px;
+    object-fit: contain; /* Ajusta la imagen al tamaño del contenedor */
+    /* object-fit: contain; */
+}
+
+.bg1{
+    /* background-color: aqua; */
+}
+.bg2{
+    /* background-color: aquamarine; */
+}
+.bg3{
+    height: 100%; /* Asegura que la columna abarque todo el alto disponible */
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    padding: 20px; /* Espacio interno */
+    box-sizing: border-box; /* Incluye el relleno y borde en el tamaño total de la caja */
+}
+.bg4 {
+    
+    height: 100%; /* Asegura que la columna abarque todo el alto disponible */
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    padding: 20px; /* Espacio interno */
+    box-sizing: border-box; /* Incluye el relleno y borde en el tamaño total de la caja */
+}
+.bg5 {
+    /* background-color: #e0e0e0; */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.bg5 .title {
+    background-color: #26a69a; /* Color de fondo azulado verdoso */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.bg5 .stats-row {
+    display: flex;
+}
+
+.bg5 .stat-col {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ffffff; /* Borde para visualizar la división */
+    min-height: 100px; /* Altura mínima para las columnas */
+}
+
+
+.circle-img {
+    width: 250px; /* Tamaño de la imagen */
+    height: 250px; /* Tamaño de la imagen */
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    margin:30px; /* Espacio entre la imagen y el botón */
+
+}
+.hidden {
+    display: none;
+}
+.thumbnail-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Alinea verticalmente, si es necesario */
+    height: 100%; /* Asegura que el contenedor ocupe todo el alto disponible */
+}
+.btn {
+    width: 200px; /* Ancho del botón */
+    padding: 10px; /* Espacio interno del botón */
+    margin-bottom: 20px; /* Espacio entre la imagen y el botón */
+    background-color: #4c66af; /* Color de fondo del botón */
+    color: rgb(239, 240, 233); /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    font-size: 16px; /* Tamaño de la fuente */
+    display: flex; /* Usa flexbox para alinear el texto del botón */
+    align-items: center; /* Centra el texto verticalmente dentro del botón */
+    justify-content: center; /* Centra el texto horizontalmente dentro del botón */
+    text-align: center; /* Centra el texto dentro del botón */
+}
+
+.btn:hover {
+    background-color: #3e85a7; /* Color de fondo del botón al pasar el ratón */
+}
+
+.info-box {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #417bb1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* max-width: 600px; */
+}
+.info-box2 {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #9ccee7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* max-width: 600px; */
+}
+.info-box3 {
+    padding: 20px;
+    border: 1px solid #7411ff;
+    border-radius: 5px;
+    background-color: #ededed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    
+    /* max-width: 600px; */
+}
+
+.info-box h5 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.info-box .info-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.info-box .info-label {
+    width: 150px;
+    font-weight: bold;
+    font-family: League Spartan;
+    font-size: larger;
+}
+
+.info-box .info-value {
+    flex: 1;
+}
+.info-label2{
+    font-weight: bold;
+    font-family: League Spartan;
+    font-size: larger;
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0) !important; /* Ajusta la opacidad del fondo */
+  }
+
+  .modal-content {
+    background-color: #f0f0f0; /* Cambia a tu color deseado */
+  }
+  
+  /* Cambiar el color de fondo del encabezado del modal */
+  .modal-header {
+    background-color: #ffffff; /* Cambia a tu color deseado */
+    color: #9684ff; /* Cambia el color del texto si es necesario */
+    font-size: 15px;
+  }
+  
+  /* Cambiar el color de fondo del pie del modal */
+  .modal-footer {
+    background-color: #f8f9fa; /* Cambia a tu color deseado */
+  }
+  .modal-backdrop.show {
+    opacity: 0 !important;
+  }
+  
+  .modal-content {
+    box-shadow: none !important;
+  }
+  .modal{
+    background-color: transparent;
+    box-shadow: none;
+  }

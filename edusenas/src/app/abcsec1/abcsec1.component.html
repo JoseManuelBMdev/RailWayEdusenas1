@@ -1,0 +1,44 @@
+<header class="header">
+    <img src="assets/img/logoazul.png" alt="EduSeñas Logo" class="logo logo-left">
+    <a [routerLink]="['/menu']" class="logo-link">
+      <img src="assets/img/colores/X.png" alt="Cerrar" class="logo logo-right">
+    </a>
+</header>
+<br><br>
+<br>
+<main>
+  <div class="content-wrapper" *ngIf="!isFinalPage(); else finalPage">
+    <div class="image-section">
+      <img [src]="currentPageData?.imageSrc1" alt="Imagen 1" class="image">
+    </div>
+    <div class="info-section" *ngIf="currentPageData">
+      <img [src]="currentPageData.imageSrc" alt="imagenabc" class="mancha">
+      <h2 class="title">{{ currentPageData.title }}</h2>
+      <p class="instruction">{{ currentPageData.instruction }}</p>
+    </div>
+    <div class="button-section">
+      <button class="got-it-button" (click)="nextPage()">¡Lo tengo!</button>
+      <button class="next-button" (click)="nextPage()">Siguiente</button>
+    </div>
+  </div>
+</main>
+<ng-template #finalPage>
+  <div class="final-page page-finished">
+      <h2 class="Titulo_Leccion">Lección Terminada</h2>
+      <img src="assets/images/astrocompleto1s-unscreen.gif" alt="Celebración" class="celebration-image">
+      <p class="colors-learned">Colores aprendidos: <br></p>
+      <p class="colores">{{ pages.length }}</p> 
+      <hr class="divider"> <!-- Línea divisoria -->
+      <div class="button-sectio">
+          <button class="restart-button" (click)="restart()">Reiniciar</button>
+          <button class="next-lesson-button" (click)="nextLesson()">Siguiente <i class="icon-next"></i></button>
+      </div>
+  </div>
+</ng-template>
+<br>
+<br>
+<footer class="footer" [ngClass]="{'no-progress': isFinalPage()}">
+  <div class="progress-bar">
+    <div class="progress" [ngStyle]="{ width: progressWidth }"></div>
+  </div>
+</footer>

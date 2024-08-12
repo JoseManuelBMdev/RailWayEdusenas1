@@ -1,0 +1,30 @@
+.card{
+    border-radius: 25px;
+    min-height: 500px;
+    margin-top: 25px;
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+}
+
+a{
+    color: white !important;
+}
+.planets {
+    
+    font-family: Arial, sans-serif;
+    /*img*/
+    background-image: 
+
+     url('../../assets/img/Estrellas.png'),
+     url('../../assets/img/Fondo.jpeg');
+    /*url('../../assets/img/Estrellas.png'),
+    url('../../assets/img/Fondo.jpeg');*/
+    background-size: cover, cover; /* Ajusta el nivel de zoom */
+    background-repeat: no-repeat, no-repeat; /* Evita que la imagen se repita */
+    background-position: center, center; /* Posiciona la imagen en el centro */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0; /* Elimina el relleno predeterminado del body */
+    height: 100vh; /* Establece la altura del body al 100% del viewport height */
+ 
+}

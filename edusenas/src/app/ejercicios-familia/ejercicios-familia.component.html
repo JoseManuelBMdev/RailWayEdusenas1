@@ -1,0 +1,71 @@
+<header class="header">
+    <img src="assets/img/logoazul.png" alt="EduSeñas Logo" class="logo logo-left">
+    <a [routerLink]="['/menu']" class="logo-link">
+      <img src="assets/img/colores/X.png" alt="Cerrar" class="logo logo-right">
+    </a>
+  </header>
+  
+  <!-- HTML -->
+  <main>
+    <div class="content-wrapper" *ngIf="!isFinalPage(); else finalPage">
+      <div class="video-section">
+        <video #videoPlayer class="video" controls *ngIf="currentPageData">
+          <source [src]="currentPageData.videoSrc" type="video/mp4">
+        </video>
+      </div>
+      <div class="question-section">
+        <h2 class="question">{{ currentPageData.question }}</h2>
+        <div *ngIf="isMultipleChoice">
+          <div class="options">
+            <button class="button4" *ngFor="let option of currentPageData.options" 
+                    [ngClass]="{'correct': option.isCorrect && selectedOption === option, 'incorrect': !option.isCorrect && selectedOption === option}"
+                    (click)="selectOption(option)">
+              {{ option.text }}
+            </button>
+          </div>
+        </div>
+        <div *ngIf="!isMultipleChoice">
+          <!-- Caja de texto y botón Enviar -->
+          <input class="cajaDetexto" type="text" [(ngModel)]="userInput" [ngStyle]="{ 'border-color': inputBorderColor }" placeholder="Escribe tu respuesta" />
+          <button class="enviar2" [ngClass]="{'default': buttonState === 'default', 'correct': buttonState === 'correct', 'incorrect': buttonState === 'incorrect'}" (click)="submitAnswer()" [disabled]="submitted">
+            Enviar
+          </button>
+        </div>       
+      </div>
+      
+      <div class="button-section">
+        <button class="got-it-button" (click)="nextPage()">¡Lo tengo!</button>
+        <button class="next-button" (click)="nextPage()" [disabled]="isMultipleChoice ? selectedOption === null : !userInput || !submitted">
+          Siguiente
+        </button>
+      </div>
+    </div>
+  </main>
+  
+  
+  
+  <ng-template #finalPage>
+    <div class="final-page full-page">
+        <h2 class="Titulo_Leccion">Lección Terminada</h2>
+        <img src="assets/images/astrocompleto1s-unscreen.gif" alt="Celebración" class="celebration-image">
+        <p class="colors-learned">Ejercicios: <br></p>
+        <p class="colores1">{{ correctAnswers }} Correctos</p> 
+        <p class="colores2">{{ incorrectAnswers }} Incorrectos</p> 
+        <hr class="divider"> <!-- Línea divisoria -->
+        <div class="button-sectio">
+            <button class="restart-button" (click)="restart()">Reiniciar</button>
+            <button class="next-lesson-button" (click)="nextLesson()">Siguiente <i class="icon-next"></i></button>
+        </div>
+    </div>
+  </ng-template>
+  
+  <footer class="footer" [ngClass]="{'no-progress': isFinalPage()}">
+    <div class="progress-bar">
+      <div class="progress" [ngStyle]="{ width: progressWidth }"></div>
+    </div>
+  </footer>
+  
+  
+  
+  
+  

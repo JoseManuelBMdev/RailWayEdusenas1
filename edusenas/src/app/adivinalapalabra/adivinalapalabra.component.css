@@ -1,0 +1,13 @@
+/* Estilo para que el iframe ocupe toda la pantalla */
+.container {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; 100% de la altura de la ventana */
+  }
+  
+  iframe {
+    width: 1800px; 
+    height: 800px;
+  }

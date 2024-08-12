@@ -1,0 +1,78 @@
+.container {
+    text-align: center;
+    height: 100vh; /* Ajusta según sea necesario */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.abc {
+    text-align: center;
+    margin-top: 30px;
+    width: 100%; /* Para asegurarse de que el título esté centrado */
+    color: aliceblue;
+    font-family: League Spartan;
+    
+}
+
+.abc h1 {
+    font-size: 3rem; /* Ajusta según sea necesario */
+    margin-bottom: 20px; /* Espacio entre el título y las imágenes */
+}
+
+.imagenes {
+    margin-top: -150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen {
+    height: auto; /* Mantiene las proporciones de las imágenes */
+    margin: 0 120px; /* Espacio entre las imágenes */
+}
+
+.izquierda, .derecha {
+    max-width: 100px; /* Tamaño máximo de las imágenes laterales */
+}
+
+.central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    max-width: 500px; /* Cambiado a max-width en lugar de width */
+    margin: 0 auto; /* Margen automático para centrar horizontalmente */
+}
+
+/* Flip animation */
+.flip-container {
+    perspective: 1000px;
+    position: relative;
+    display: inline-block;
+    margin: 0 150px; /* Ajusta según sea necesario */
+}
+
+.flipper {
+    position: relative;
+    width: 500px; /* Ajusta según el tamaño de la imagen central */
+    height: 500px; /* Ajusta según el tamaño de la imagen central */
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+}

@@ -1,0 +1,46 @@
+<div class="ca">
+    <button class="btn btn-danger" (click)="stopCamera()">Apagar camara</button>
+    <div class="text-center">
+        <video autoplay playsinline #videoElement></video><br>
+    </div>
+    
+
+    <div class="d-flex justify-content-between">
+        <div>
+            <img src="../../../assets/abecedario_IMG/letraa.png" (click)="predecir()" width="100" alt="img">
+            <div (click)="clean()" style="background-color: white; min-width: 20px; min-height: 20px; cursor: pointer;"></div>
+        </div>
+        <div>
+            <img src="../../../assets/abecedario_IMG/letrab.png" (click)="predecir()" width="100" alt="img">
+            <div (click)="clean()" style="background-color: white; min-width: 20px; min-height: 20px; cursor: pointer;"></div>
+        </div>
+        <div>
+            <img src="../../../assets/abecedario_IMG/letrac.png" (click)="predecir()" width="100" alt="img">
+            <div (click)="clean()" style="background-color: white; min-width: 20px; min-height: 20px; cursor: pointer;"></div>
+        </div>
+        <div>
+            <img src="../../../assets/abecedario_IMG/letrad.png" (click)="predecir()" width="100" alt="img">
+            <div (click)="clean()" style="background-color: white; min-width: 20px; min-height: 20px; cursor: pointer;"></div>
+        </div>
+        <div>
+            <img src="../../../assets/abecedario_IMG/letrae.png" (click)="predecir()" width="100" alt="img">
+            <div (click)="clean()" style="background-color: white; min-width: 20px; min-height: 20px; cursor: pointer;"></div>
+        </div>
+        <div>
+            <img src="../../../assets/abecedario_IMG/letraf.png" (click)="predecir()" width="100" alt="img">
+            <div (click)="clean()" style="background-color: white; min-width: 20px; min-height: 20px; cursor: pointer;"></div>
+        </div>
+        
+    </div>
+   
+    
+    
+    <div class="percentage-bar">
+        <div class="fill" [style.width.%]="randomPercentage"></div>
+        
+    </div>
+    <div class="text-center">
+        <p class="porcen">{{randomPercentage }} %</p>
+    </div>
+    
+</div>

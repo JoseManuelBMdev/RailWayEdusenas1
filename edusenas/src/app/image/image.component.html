@@ -1,0 +1,15 @@
+<div style="color: white;">
+    <h2>Upload Image for Prediction</h2>
+    <input type="file" (change)="onFileSelected($event)" />
+    <button (click)="onUpload()" [disabled]="!selectedFile">Upload</button>
+    
+    <div *ngIf="prediction">
+      <h3>Prediction Result</h3>
+      <p>{{ prediction }}</p>
+    </div>
+  
+    <div *ngIf="error">
+      <h3>Error</h3>
+      <p>{{ error }}</p>
+    </div>
+  </div>
